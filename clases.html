@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/fotos/index/logo.png" type="image/png">
+    <title>Clases</title>
+</head>
+<body>
+    <link rel="stylesheet" href="/assets/css/clases.css">
+    <header>
+        <h1>OLIMPO GYM</h1>
+    </header>
+   
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="mega-opcion">
+                <a href="clases.html">Clases</a>
+                <div class="mega-menu">
+                    <div class="mega-columna">
+                        <h4>Fuerza</h4>
+                        <a href="#">Musculación</a>
+                        <a href="#">Powerlifting</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Funcional</h4>
+                        <a href="#">CrossFit</a>
+                        <a href="#">Calistenia</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Bienestar</h4>
+                        <a href="#">Yoga</a>
+                        <a href="#">Pilates</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="precios.html">Planes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <!-- Añadimos el botón para alternar el modo oscuro -->
+            <li><button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button></li>
+        </ul>
+    </nav>
+ 
+    <!--SECCION DE LAS CLASES-->
+    <section class="clases">
+        <h2>Clases</h2>
+        <div class="contenedor-filtros">
+            <input type= "checkbox" id="musculacion" name="categoria" value="musculacion">
+            <label for="musculacion">Musculación</label>
+            <input type= "checkbox" id="powerlifting" name="categoria" value="crossfit">
+            <label for="powerlifting">Powerlifting</label>
+            <input type= "checkbox" id="crossfit" name="categoria" value="crossfit">
+            <label for="crossfit">CrossFit</label>
+            <input type= "checkbox" id="calistenia" name="categoria" value="calistenia">
+            <label for="calistenia">Calistenia</label>
+            <input type= "checkbox" id="yoga" name="categoria" value="yoga">
+            <label for="yoga">Yoga</label>
+            <input type= "checkbox" id="pilates" name="categoria" value="pilates">
+            <label for="pilates">Pilates</label>
+        </div>
+    </section>
+    <section class="galeria">
+        <div class="tarjeta" data-categoria="musculacion">
+            <h3>Musculación</h3>
+            <p>Entrenamiento de fuerza y resistencia muscular.</p>
+            <img src="assets/fotos/clases/musculacion.jpg" alt="Musculación">
+        </div>
+        <div class="tarjeta" data-categoria="powerlifting">
+            <h3>Powerlifting</h3>
+            <p>Entrenamiento de levantamiento de pesas.</p>
+            <img src="assets/fotos/clases/powerlifting.jpg" alt="Powerlifting">
+        </div>
+        <div class="tarjeta" data-categoria="crossfit">
+            <h3>CrossFit</h3>
+            <p>Entrenamiento funcional de alta intensidad.</p>
+            <img src="assets/fotos/clases/crossfit.jpg" alt="CrossFit">
+        </div>
+        <div class="tarjeta" data-categoria="calistenia">
+            <h3>Calistenia</h3>
+            <p>Entrenamiento con el peso corporal.</p>
+            <img src="assets/fotos/clases/calistenia.jpg" alt="Calistenia">
+        </div>
+        <div class="tarjeta" data-categoria="yoga">
+            <h3>Yoga</h3>
+            <p>Conexión mente-cuerpo a través de la respiración y el movimiento.</p>
+            <img src="assets/fotos/clases/yoga.jpg" alt="Yoga">
+        </div>
+        <div class="tarjeta" data-categoria="pilates">
+            <h3>Pilates</h3>
+            <p>Entrenamiento de fuerza y flexibilidad.</p>
+            <img src="assets/fotos/clases/pilates.jpg" alt="Pilates">
+        </div>
+    </section>
+    <section class="horarios-semanales">
+        <h2>Horarios Semanales</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Musculación</th>
+                    <th>Powerlifting</th>
+                    <th>CrossFit</th>
+                    <th>Calistenia</th>
+                    <th>Yoga</th>
+                    <th>Pilates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Día">Lunes</td>
+                    <td data-label="Musculación">10:00 - 11:00</td>
+                    <td data-label="Powerlifting">11:00 - 12:00</td>
+                    <td data-label="CrossFit">12:00 - 13:00</td>
+                    <td data-label="Calistenia">13:00 - 14:00</td>
+                    <td data-label="Yoga">14:00 - 15:00</td>
+                    <td data-label="Pilates">15:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td data-label="Día">Martes</td>
+                    <td data-label="Musculación">10:00 - 11:00</td>
+                    <td data-label="Powerlifting">11:00 - 12:00</td>
+                    <td data-label="CrossFit">12:00 - 13:00</td>
+                    <td data-label="Calistenia">13:00 - 14:00</td>
+                    <td data-label="Yoga">14:00 - 15:00</td>
+                    <td data-label="Pilates">15:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td data-label="Día">Miércoles</td>
+                    <td data-label="Musculación">10:00 - 11:00</td>
+                    <td data-label="Powerlifting">11:00 - 12:00</td>
+                    <td data-label="CrossFit">12:00 - 13:00</td>
+                    <td data-label="Calistenia">13:00 - 14:00</td>
+                    <td data-label="Yoga">14:00 - 15:00</td>
+                    <td data-label="Pilates">15:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td data-label="Día">Jueves</td>
+                    <td data-label="Musculación">10:00 - 11:00</td>
+                    <td data-label="Powerlifting">11:00 - 12:00</td>
+                    <td data-label="CrossFit">12:00 - 13:00</td>
+                    <td data-label="Calistenia">13:00 - 14:00</td>
+                    <td data-label="Yoga">14:00 - 15:00</td>
+                    <td data-label="Pilates">15:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td data-label="Día">Viernes</td>
+                    <td data-label="Musculación">10:00 - 11:00</td>
+                    <td data-label="Powerlifting">11:00 - 12:00</td>
+                    <td data-label="CrossFit">12:00 - 13:00</td>
+                    <td data-label="Calistenia">13:00 - 14:00</td>
+                    <td data-label="Yoga">14:00 - 15:00</td>
+                    <td data-label="Pilates">15:00 - 16:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="horarios-atencion">
+        <h2>Horarios de Atención</h2>
+        <p>Lunes a Viernes: 8:00 - 22:00</p>
+        <p>Sábados: 9:00 - 20:00</p>
+        <p>Domingos: Cerrado</p>
+        <p>Festivos: Cerrado</p>
+        <p>Consulta nuestros horarios especiales para días festivos.</p>
+        <p>Para más información, visita nuestra sección de contacto.</p>
+        <p>¡Te esperamos!</p>
+    </section>
+
+    
+
+<!--Footer-->
+<footer>
+    <div class="footer-contenido">
+        <div class="newsletter">
+            <h2>Suscríbete a nuestro boletín</h2>
+            <form action="#">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+        <div class="redes-suscripcion">
+            <h2>Conecta con nosotros</h2>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="mapa">
+            <h2>Nuestra ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Todos los derechos reservados</p>
+    </div>
+</footer>
+<script src="/assets/js/index/index.js"></script>
+    
+</body>
+</html>
