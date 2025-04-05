@@ -259,11 +259,14 @@ header h1 {
     box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
 }
 
-.hero-contenido button:hover,
-.hero-contenido button:focus {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 77, 77, 0.6);
-    outline: none;
+body.modo-oscuro .hero-contenido,
+body.modo-oscuro .hero-contenido h1,
+body.modo-oscuro .hero-contenido button {
+    color: #ffffff;
+}
+
+body.modo-oscuro .hero-contenido p {
+    color: #b0b0b0; 
 }
 
 /* Animaciones para la Sección Hero */
@@ -372,7 +375,14 @@ header h1 {
     color: #666;
     font-size: 1rem;
 }
+/* Ajuste para modo oscuro: aseguramos que el texto sea legible */
+body.modo-oscuro .tarjeta h3 {
+    color: #ffffff; /* Forzamos el texto a blanco para que sea legible */
+}
 
+body.modo-oscuro .tarjeta p {
+    color: #b0b0b0; /* Un gris claro para el texto secundario, para mejorar legibilidad */
+}
 /* Contador Animado */
 .contador {
     background: var(--color-gradiente);
