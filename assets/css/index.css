@@ -27,6 +27,60 @@ body {
     overflow-x: hidden;
 }
 
+/* Modo oscuro: Cambiamos las variables cuando el body tiene la clase .modo-oscuro */
+body.modo-oscuro {
+    --color-primario: #f5f5f5; /* Invertimos: fondo claro para modo oscuro */
+    --color-acento: #1a1a1a; /* Fondo oscuro */
+    --color-texto: #1a1a1a; /* Texto oscuro */
+    --color-texto-secundario: #666; /* Texto secundario más oscuro */
+    --color-sombra: rgba(255, 255, 255, 0.3); /* Sombra clara */
+    --color-gradiente: linear-gradient(135deg, #ff7b7b, #ff4d4d); /* Invertimos el gradiente */
+}
+
+/* Ajustes específicos para elementos en modo oscuro */
+body.modo-oscuro .tarjeta {
+    background: var(--color-acento);
+}
+
+body.modo-oscuro .tarjeta h3,
+body.modo-oscuro .tarjeta p {
+    color: var(--color-texto);
+}
+
+body.modo-oscuro .testimonios {
+    background: var(--color-acento);
+}
+
+body.modo-oscuro .testimonios h2 {
+    color: var(--color-texto);
+}
+
+body.modo-oscuro .carrusel .slide {
+    background: var(--color-primario);
+    color: var(--color-texto);
+}
+
+/* Estilo para el botón de alternar modo oscuro */
+#toggle-modo {
+    background: none;
+    border: none;
+    color: var(--color-texto);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.7rem 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+#toggle-modo:hover,
+#toggle-modo:focus {
+    transform: scale(1.1);
+    outline: none;
+}
+
+body.modo-oscuro #toggle-modo {
+    color: var(--color-texto);
+}
+
 /* Header */
 header {
     background: var(--color-primario);
