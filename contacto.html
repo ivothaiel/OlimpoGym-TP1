@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="icon" href="/assets/fotos/index/logo.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/contactos.css">
+</head>
+<body>
+    <header>
+        <h1>OLIMPO GYM</h1>
+    </header>
+
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="mega-opcion">
+                <a href="clases.html">Clases</a>
+                <div class="mega-menu">
+                    <div class="mega-columna">
+                        <h4>Fuerza</h4>
+                        <a href="#">Musculación</a>
+                        <a href="#">Powerlifting</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Funcional</h4>
+                        <a href="#">CrossFit</a>
+                        <a href="#">Calistenia</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Bienestar</h4>
+                        <a href="#">Yoga</a>
+                        <a href="#">Pilates</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="precios.html">Planes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <!-- Añadimos el botón para alternar el modo oscuro -->
+            <li><button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button></li>
+        </ul>
+    </nav>
+ 
+    <!-- Sección de Contacto -->
+    <section class="seccion-contacto">
+        <h2>Contáctanos</h2>
+        <p>Estamos aquí para ayudarte. Completa el formulario y te responderemos pronto.</p>
+        <form id="form-contacto" class="formulario-contacto">
+            <div class="form-grid">
+                <div class="form-grupo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="2" placeholder="Tu nombre">
+                    <span class="mensaje-error">El nombre debe tener al menos 2 caracteres.</span>
+                </div>
+                <div class="form-grupo">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tuemail@ejemplo.com">
+                    <span class="mensaje-error">Ingresa un correo válido.</span>
+                </div>
+                <div class="form-grupo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,12}" placeholder="123456789">
+                    <span class="mensaje-error">Ingresa un número de 9 a 12 dígitos.</span>
+                </div>
+                <div class="form-grupo">
+                    <label for="motivo">Motivo de Contacto</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="consulta">Consulta General</option>
+                        <option value="clases">Información sobre Clases</option>
+                        <option value="entrenadores">Hablar con un Entrenador</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    <span class="mensaje-error">Selecciona un motivo.</span>
+                </div>
+                <div class="form-grupo form-mensaje">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" required minlength="10" placeholder="Escribe tu mensaje aquí"></textarea>
+                    <span class="mensaje-error">El mensaje debe tener al menos 10 caracteres.</span>
+                </div>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            <div class="spinner" id="spinner"></div>
+        </form>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div id="modal-confirmacion" class="modal">
+        <div class="modal-contenido">
+            <h3>¡Mensaje Enviado!</h3>
+            <p>Gracias por contactarnos. Te responderemos lo antes posible.</p>
+            <button id="cerrar-modal" class="btn-cerrar">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="newsletter">
+                <h2>Suscríbete a nuestro boletín</h2>
+                <form action="#">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <div class="redes-sociales">
+                <h2>Conecta con nosotros</h2>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+            <div class="mapa">
+                <h2>Nuestra ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Todos los derechos reservados</p>
+        </div>
+    </footer>
+     <!-- Enlace al JS -->
+     <script src="/assets/js/index.js"></script>
+
+</body>
+</html>
