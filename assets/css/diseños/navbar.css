@@ -1,0 +1,108 @@
+/* Header */
+header {
+    background: var(--color-primario);
+    padding: 1.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--color-sombra);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-texto);
+    text-transform: uppercase;
+}
+
+/* Menú de Navegación con Mega-Menú */
+.menu-navegacion {
+    background: var(--color-primario);
+    padding: 1rem;
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.menu-navegacion li {
+    position: relative;
+}
+
+.menu-navegacion a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-navegacion a:hover,
+.menu-navegacion a:focus {
+    color: var(--color-secundario);
+    transform: scale(1.05);
+    outline: none;
+}
+
+.menu-navegacion a:focus {
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.5);
+}
+
+/* Mega-Menú */
+.mega-opcion:hover .mega-menu,
+.mega-opcion:focus-within .mega-menu {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mega-menu {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-acento);
+    box-shadow: 0 4px 15px var(--color-sombra);
+    padding: 1.5rem;
+    z-index: 1000;
+    flex-direction: row;
+    gap: 2rem;
+    border-radius: 8px;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mega-columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.mega-columna h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primario);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.mega-columna a {
+    color: var(--color-primario);
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.mega-columna a:hover,
+.mega-columna a:focus {
+    color: var(--color-secundario);
+}
