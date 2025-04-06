@@ -57,7 +57,7 @@ window.addEventListener('scroll', () => {
 });
 
 // --- Funcionalidad del Modo Oscuro ---
-// Seleccionamos el botón para alternar el modo y el body
+
 const toggleModo = document.getElementById('toggle-modo');
 const body = document.body;
 

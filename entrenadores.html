@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenadores</title>
+    <link rel="icon" href="/assets/fotos/index/logo.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/entrenadores.css">
+</head>
+<body>
+    <header>
+        <h1>OLIMPO GYM</h1>
+    </header>
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="mega-opcion">
+                <a href="clases.html">Clases</a>
+                <div class="mega-menu">
+                    <div class="mega-columna">
+                        <h4>Fuerza</h4>
+                        <a href="#">Musculación</a>
+                        <a href="#">Powerlifting</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Funcional</h4>
+                        <a href="#">CrossFit</a>
+                        <a href="#">Calistenia</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Bienestar</h4>
+                        <a href="#">Yoga</a>
+                        <a href="#">Pilates</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="precios.html">Planes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="/assets/videos/entrenadores/entrenador.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h2>Conoce a Nuestros Entrenadores</h2>
+            <p>Los mejores profesionales para ayudarte a alcanzar tus metas.</p>
+        </div>
+    </section>
+
+    <!-- Entrenadores -->
+    <section class="seccion-entrenadores">
+        <h2>Entrenadores</h2>
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta-entrenador">
+                <div class="tarjeta-inner">
+                    <div class="tarjeta-front">
+                        <img src="/assets/fotos/entrenadores/calistenia.jpg" alt="Entrenadora de Calistenia">
+                        <h3>Maria Rodriguez</h3>
+                        <p>Entrenadora de Calistenia</p>
+                        <p>Especialista en entrenamiento funcional y calistenia.</p>
+                        <div class="barra-habilidades">
+                            <div class="habilidad">
+                                <span>Fuerza</span>
+                                <div class="barra" style="--bar-width: 95%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Funcional</span>
+                                <div class="barra" style="--bar-width: 90%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Bienestar</span>
+                                <div class="barra"  style="--bar-width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <div class="tarjeta-back">
+                        <h3>Maria Rodriguez</h3>
+                        <p>Certificada en CrossFit y entrenamiento de alta intensidad.</p>
+                        <p>Teléfono: 123-456-7890</p>
+                        <p>Correo: maria.rodriguez@entrenadores.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta-entrenador">
+                <div class="tarjeta-inner">
+                    <div class="tarjeta-front">
+                        <img src="/assets/fotos/entrenadores/yoga.jpg" alt="Entrenadora de Yoga">
+                        <h3>Laura Martinez</h3>
+                        <p>Entrenadora de Yoga</p>
+                        <p>Especialista en yoga y meditación.</p>
+                        <div class="barra-habilidades">
+                            <div class="habilidad">
+                                <span>Flexibilidad</span>
+                                <div class="barra"  style="--bar-width: 95%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Bienestar</span>
+                                <div class="barra"  style="--bar-width: 90%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Respiración</span>
+                                <div class="barra"  style="--bar-width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                        </div>
+                    </div>
+                    <div class="tarjeta-back">
+                        <h3>Laura Martinez</h3>
+                        <p>Certificada en Hatha Yoga y Vinyasa Flow.</p>
+                        <p>Teléfono: 987-654-3210</p>
+                        <p>Correo: laura.martinez@entrenadores.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta-entrenador">
+                <div class="tarjeta-inner">
+                    <div class="tarjeta-front">
+                        <img src="/assets/fotos/entrenadores/pilates entrenador.jpg" alt="Entrenadora de Pilates">
+                        <h3>Martina Sanchez</h3>
+                        <p>Entrenadora de Pilates</p>
+                        <p>Especialista en pilates y entrenamiento de fuerza.</p>
+                        <div class="barra-habilidades">
+                            <div class="habilidad">
+                                <span>Fuerza</span>
+                                <div class="barra"  style="--bar-width: 90%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Flexibilidad</span>
+                                <div class="barra"  style="--bar-width: 85%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Bienestar</span>
+                                <div class="barra"  style="--bar-width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <div class="tarjeta-back">
+                        <h3>Martina Sanchez</h3>
+                        <p>Certificada en Pilates Reformer y Mat.</p>
+                        <p>Teléfono: 456-789-1230</p>
+                        <p>Correo: martina.sanchez@entrenadores.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta-entrenador">
+                <div class="tarjeta-inner">
+                    <div class="tarjeta-front">
+                        <img src="/assets/fotos/entrenadores/musculacion.jpg" alt="Entrenador de Musculación">
+                        <h3>Juan Perez</h3>
+                        <p>Entrenador de Musculación</p>
+                        <p>Especialista en musculación y entrenamiento de fuerza.</p>
+                        <div class="barra-habilidades">
+                            <div class="habilidad">
+                                <span>Fuerza</span>
+                                <div class="barra"  style="--bar-width: 95%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Flexibilidad</span>
+                                <div class="barra"  style="--bar-width: 70%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Funcional</span>
+                                <div class="barra"  style="--bar-width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <div class="tarjeta-back">
+                        <h3>Juan Perez</h3>
+                        <p>Certificado en entrenamiento de fuerza y nutrición deportiva.</p>
+                        <p>Teléfono: 321-654-9870</p>
+                        <p>Correo: juan.perez@entrenadores.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta-entrenador">
+                <div class="tarjeta-inner">
+                    <div class="tarjeta-front">
+                        <img src="/assets/fotos/entrenadores/powerlifting.jpg" alt="Entrenadora de Powerlifting">
+                        <h3>Claudia Torres</h3>
+                        <p>Entrenadora de Powerlifting</p>
+                        <p>Especialista en powerlifting y entrenamiento de fuerza.</p>
+                        <div class="barra-habilidades">
+                            <div class="habilidad">
+                                <span>Fuerza</span>
+                                <div class="barra"  style="--bar-width: 90%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Funcional</span>
+                                <div class="barra"  style="--bar-width: 85%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Bienestar</span>
+                                <div class="barra"  style="--bar-width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <div class="tarjeta-back">
+                        <h3>Claudia Torres</h3>
+                        <p>Certificada en powerlifting y nutrición deportiva.</p>
+                        <p>Teléfono: 654-321-9870</p>
+                        <p>Correo: claudia.torres@entrenadores.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta-entrenador">
+                <div class="tarjeta-inner">
+                    <div class="tarjeta-front">
+                        <img src="/assets/fotos/entrenadores/crossfit.jpg" alt="Entrenador de CrossFit">
+                        <h3>Andres Gomez</h3>
+                        <p>Entrenador de CrossFit</p>
+                        <p>Especialista en CrossFit y entrenamiento funcional.</p>
+                        <div class="barra-habilidades">
+                            <div class="habilidad">
+                                <span>Fuerza</span>
+                                <div class="barra" style="--bar-width: 90%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Funcional</span>
+                                <div class="barra" style="--bar-width: 85%;"></div>
+                            </div>
+                            <div class="habilidad">
+                                <span>Bienestar</span>
+                                <div class="barra" style="--bar-width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                            <span class="filled">★</span>
+                        </div>
+                    </div>
+                    <div class="tarjeta-back">
+                        <h3>Andres Gomez</h3>
+                        <p>Certificado en CrossFit y entrenamiento de alta intensidad.</p>
+                        <p>Teléfono: 789-123-4560</p>
+                        <p>Correo: andres.gomez@entrenadores.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="newsletter">
+                <h2>Suscríbete a nuestro boletín</h2>
+                <form action="#">
+                    <input type="email" placeholder="Correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <div class="redes-sociales">
+                <h2>Conecta con nosotros</h2>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+            <div class="mapa">
+                <h2>Nuestra ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Olimpo Gym. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al JS -->
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>
