@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link rel="icon" href="/assets/fotos/index/logo.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+<body>
+    <header>
+        <h1>OLIMPO GYM</h1>
+    </header>
+   
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="mega-opcion">
+                <a href="clases.html">Clases</a>
+                <div class="mega-menu">
+                    <div class="mega-columna">
+                        <h4>Fuerza</h4>
+                        <a href="#">Musculación</a>
+                        <a href="#">Powerlifting</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Funcional</h4>
+                        <a href="#">CrossFit</a>
+                        <a href="#">Calistenia</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Bienestar</h4>
+                        <a href="#">Yoga</a>
+                        <a href="#">Pilates</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="precios.html">Planes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <!-- Añadimos el botón para alternar el modo oscuro -->
+            <li><button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button></li>
+        </ul>
+    </nav>
+    <section class="container">
+        <aside class="sidebar">
+        <div class="categories">
+            <h2>Categorías</h2>
+            <ul>
+                <li><input type="radio" name="category" id="all-cat" checked><label for="all-cat">Todas</label></li>
+                <li><input type="radio" name="category" id="nutricion" data-category="nutricion"><label for="nutricion">Nutrición</label></li>
+                <li><input type="radio" name="category" id="entrenamiento" data-category="entrenamiento"><label for="entrenamiento">Entrenamiento</label></li>
+                <li><input type="radio" name="category" id="salud" data-category="salud"><label for="salud">Salud</label></li>
+                <li><input type="radio" name="category" id="estilo-de-vida" data-category="estilo-de-vida"><label for="estilo-de-vida">Estilo de Vida</label></li>
+            </ul>
+        </div>
+        <div class="tags">
+            <h2>Tags</h2>
+            <ul>
+                <li><input type="checkbox" id="fitness" data-tag="fitness"><label for="fitness">Fitness</label></li>
+                <li><input type="checkbox" id="ejercicio" data-tag="ejercicio"><label for="ejercicio">Ejercicio</label></li>
+                <li><input type="checkbox" id="dieta" data-tag="dieta"><label for="dieta">Dieta</label></li>
+                <li><input type="checkbox" id="bienestar" data-tag="bienestar"><label for="bienestar">Bienestar</label></li>
+            </ul>
+        </div>
+    </aside>
+    <section class="articles">
+        <article class="article reveal" data-category="nutricion" data-tags="fitness dieta">
+            <img src="/assets/fotos/blog/nutricion.jpg" alt="Artículo 1">
+            <h2><a href="#">Guía de Nutrición para Ganar Músculo</a></h2>
+            <p>Recetas, consejos y trucos para ganar músculo de manera saludable.</p>
+            <div class="article-meta">
+                <span>Categoría: Nutrición</span>
+                <span>Tags: Fitness, Dieta</span>
+            </div>
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@lopezmartin:</strong> ¡Excelente artículo! Me ayudó mucho con mi dieta.</p>
+                </div>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@maria123:</strong> Muy útil, gracias por compartir.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="article reveal" data-category="entrenamiento" data-tags="ejercicio fitness">
+            <img src="/assets/fotos/blog/entrenamientoblog1.jpg" alt="Artículo 2">
+            <h2><a href="#">Rutina de Entrenamiento para Principiantes</a></h2>
+            <p>Todo lo necesario para empezar a entrenar de manera segura y efectiva.</p>
+            <div class="article-meta">
+                <span>Categoría: Entrenamiento</span>
+                <span>Tags: Ejercicio, Fitness</span>
+            </div>
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@lucilatorres:</strong> ¡Me sirvió mucho para empezar!</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="article reveal" data-category="salud" data-tags="bienestar">
+            <img src="/assets/fotos/blog/saludmental.jpg" alt="Artículo 3">
+            <h2><a href="#">Cómo Mejorar tu Salud Mental</a></h2>
+            <p>No estas sol@ , hay ayuda y recursos para mejorar tu salud mental.</p>
+            <div class="article-meta">
+                <span>Categoría: Salud</span>
+                <span>Tags: Bienestar</span>
+            </div>
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@tobias34:</strong> Gracias por tu información!</p>
+                </div>
+            </div>
+        </article>
+        <article class="article reveal" data-category="estilo-de-vida" data-tags="fitness">
+            <img src="/assets/fotos/blog/vidasana.jpg" alt="Artículo 4">
+            <h2><a href="#">Estilo de Vida Saludable: Consejos Prácticos</a></h2>
+            <p> Consejos para mejorar tu estilo de vida y sentirte mejor.</p>
+            <div class="article-meta">
+                <span>Categoría: Estilo de Vida</span>
+                <span>Tags: Fitness</span>
+            </div>
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@lucashernandez:</strong> Muy interesante!</p>
+                </div>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@martinarodriguez:</strong> Gracias por compartir.</p>
+                </div>
+            </div>
+        </article>
+        <!-- Añadimos el botón para mostrar más artículos -->
+         <button>Mostrar más artículos</button>
+    </section>
+</section>
+    
+
+
+ <!--Footer-->
+<footer>
+    <div class="footer-contenido">
+        <div class="newsletter">
+            <h2>Suscríbete a nuestro boletín</h2>
+            <form action="#">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+        <div class="redes-sociales">
+            <h2>Conecta con nosotros</h2>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="mapa">
+            <h2>Nuestra ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Todos los derechos reservados</p>
+    </div>
+</footer>
+<script src="/assets/js/index.js"></script>
+    
+    
+</body>
+</html>
