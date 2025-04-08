@@ -158,7 +158,6 @@ body.modo-oscuro #toggle-modo {
 .form-grupo textarea:invalid:not(:placeholder-shown) ~ .mensaje-error {
     display: block;
 }
-/* Botón Enviar */
 .btn-enviar {
     background: var(--color-gradiente);
     color: var(--color-texto);
@@ -179,7 +178,6 @@ body.modo-oscuro #toggle-modo {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(255, 77, 77, 0.6);
 }
-
 /* Spinner */
 .spinner {
     display: none;
@@ -198,6 +196,9 @@ body.modo-oscuro #toggle-modo {
     100% {
         transform: rotate(360deg);
     }
+}
+#submit-check:checked ~ .spinner {
+    display: block;
 }
 /* Modal */
 .modal {
@@ -239,7 +240,9 @@ body.modo-oscuro #toggle-modo {
     color: #666;
     margin-bottom: 1.5rem;
 }
-
+#submit-check:checked ~ .modal {
+    display: flex;
+}
 .btn-cerrar {
     background: var(--color-secundario);
     color: var(--color-texto);
