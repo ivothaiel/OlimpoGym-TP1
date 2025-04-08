@@ -376,7 +376,7 @@ body.modo-oscuro .hero-contenido p {
     color: #666;
     font-size: 1rem;
 }
-/* Ajuste para modo oscuro: aseguramos que el texto sea legible */
+
 body.modo-oscuro .tarjeta h3 {
     color: #ffffff; /* Forzamos el texto a blanco para que sea legible */
 }
@@ -384,7 +384,6 @@ body.modo-oscuro .tarjeta h3 {
 body.modo-oscuro .tarjeta p {
     color: #b0b0b0; /* Un gris claro para el texto secundario, para mejorar legibilidad */
 }
-/* Contador Animado */
 .contador {
     background: var(--color-gradiente);
     color: var(--color-texto);
@@ -421,6 +420,7 @@ body.modo-oscuro .tarjeta p {
     font-size: 1.2rem;
     position: relative;
     z-index: 1;
+    display: inline-block;
 }
 
 .numero {
@@ -428,9 +428,48 @@ body.modo-oscuro .tarjeta p {
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
     font-weight: 700;
+    min-width: 150px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Testimonios (Carrusel CSS) */
+.numero::before {
+    content: "+300"; /* Valor final */
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+.numero::after {
+    content: "0"; /* Valor inicial */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    animation: fadeOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*testimonios del carrusel CSS */
 .testimonios {
     padding: 5rem 2rem;
     text-align: center;
