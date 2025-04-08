@@ -59,44 +59,45 @@ body.modo-oscuro #toggle-modo {
 }
 
 
-
-/* Sección de Clases (Filtros) */
-.clases {
-    padding: 3rem 2rem;
-    background: var(--color-primario);
+/* Estilos Generales */
+.seccion-clases {
+    padding: 5rem 2rem;
     text-align: center;
-    min-height: auto;
+    background: var(--color-primario);
 }
 
-.clases h2 {
+.seccion-clases h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
     color: var(--color-texto);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
+/* Contenedor de Filtros */
 .contenedor-filtros {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
     margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .contenedor-filtros input[type="checkbox"] {
-    display: none; /* Ocultamos el checkbox por defecto */
+    display: none; /* Ocultamos los checkboxes reales */
 }
 
 .contenedor-filtros label {
     background: var(--color-acento);
     color: var(--color-primario);
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 25px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
 }
@@ -107,7 +108,11 @@ body.modo-oscuro #toggle-modo {
 }
 
 body.modo-oscuro .contenedor-filtros label {
-    background: var(--color-primario);
+    color: var(--color-primario);
+}
+
+body.modo-oscuro .contenedor-filtros input[type="checkbox"]:checked + label {
+    background: var(--color-secundario);
     color: var(--color-texto);
 }
 
@@ -134,7 +139,7 @@ body.modo-oscuro .contenedor-filtros label {
 /* Ajustamos las imágenes para que tengan el mismo tamaño que en index.css */
 .tarjeta img {
     width: 100%;
-    height: 200px; /* Igual que en index.css (.clases-destacadas .tarjeta img) */
+    height: 200px;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
@@ -153,7 +158,6 @@ body.modo-oscuro .contenedor-filtros label {
     transition: opacity 0.3s ease;
 }
 
-/* Contenido del overlay (título y descripción) */
 .tarjeta h3,
 .tarjeta p {
     position: absolute;
@@ -165,11 +169,11 @@ body.modo-oscuro .contenedor-filtros label {
     z-index: 1;
 }
 
-/* Ajuste para modo oscuro: forzamos el texto a blanco */
 body.modo-oscuro .tarjeta h3,
 body.modo-oscuro .tarjeta p {
     color: #ffffff;
 }
+
 .tarjeta h3 {
     top: 30%;
     font-family: 'Montserrat', sans-serif;
@@ -185,7 +189,6 @@ body.modo-oscuro .tarjeta p {
     width: 80%;
 }
 
-/* Efectos al pasar el cursor */
 .tarjeta:hover,
 .tarjeta:focus-within {
     transform: translateY(-10px);
@@ -210,18 +213,17 @@ body.modo-oscuro .tarjeta p {
     transform: translateX(-50%) translateY(-10px);
 }
 
-/* Filtrado por categoría usando :checked */
-.tarjeta {
-    display: block; /* Por defecto, todas las tarjetas son visibles */
+.galeria .tarjeta {
+    display: block;
 }
 
-/* Ocultamos las tarjetas solo si el checkbox correspondiente está marcado y usamos una clase para identificar la categoría */
-#musculacion:checked ~ .galeria .tarjeta:not([data-categoria="musculacion"]),
-#powerlifting:checked ~ .galeria .tarjeta:not([data-categoria="powerlifting"]),
-#crossfit:checked ~ .galeria .tarjeta:not([data-categoria="crossfit"]),
-#calistenia:checked ~ .galeria .tarjeta:not([data-categoria="calistenia"]),
-#yoga:checked ~ .galeria .tarjeta:not([data-categoria="yoga"]),
-#pilates:checked ~ .galeria .tarjeta:not([data-categoria="pilates"]) {
+/* Filtrado con CSS */
+#musculacion:not(:checked) ~ .galeria .tarjeta[data-categoria="musculacion"],
+#powerlifting:not(:checked) ~ .galeria .tarjeta[data-categoria="powerlifting"],
+#crossfit:not(:checked) ~ .galeria .tarjeta[data-categoria="crossfit"],
+#calistenia:not(:checked) ~ .galeria .tarjeta[data-categoria="calistenia"],
+#yoga:not(:checked) ~ .galeria .tarjeta[data-categoria="yoga"],
+#pilates:not(:checked) ~ .galeria .tarjeta[data-categoria="pilates"] {
     display: none;
 }
 
@@ -351,11 +353,12 @@ body.modo-oscuro .horarios-semanales tr:nth-child(even) {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
-    color: var(--color-primario);
+    color: var(--color-primario); 
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
 
 .horarios-atencion p {
     font-family: 'Poppins', sans-serif;
@@ -369,7 +372,7 @@ body.modo-oscuro .horarios-atencion {
 }
 
 body.modo-oscuro .horarios-atencion h2 {
-    color: var(--color-texto);
+    color: #ffffff;
 }
 
 body.modo-oscuro .horarios-atencion p {
