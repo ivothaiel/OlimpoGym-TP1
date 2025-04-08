@@ -81,9 +81,18 @@ body.modo-oscuro #toggle-modo {
 }
 
 /* Toggle Mensual/Anual */
-.toggle-container {
+#toggle-plan {
+    display: none;
+}
+
+.contenedor-precios {
     margin: 2rem auto;
     max-width: 300px;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
 }
 
 .toggle-label {
@@ -98,6 +107,7 @@ body.modo-oscuro #toggle-modo {
     font-size: 1rem;
     color: var(--color-primario);
     position: relative;
+    width: 200px; /* Ajusta según necesites */
 }
 
 .toggle-switch {
@@ -121,15 +131,11 @@ body.modo-oscuro #toggle-modo {
     transition: transform 0.3s ease;
 }
 
-#toggle-plan {
-    display: none;
-}
-
-#toggle-plan:checked + .toggle-label .toggle-switch {
+#toggle-plan:checked + .contenedor-precios .toggle-label .toggle-switch {
     background: var(--color-secundario);
 }
 
-#toggle-plan:checked + .toggle-label .toggle-switch::before {
+#toggle-plan:checked + .contenedor-precios .toggle-label .toggle-switch::before {
     transform: translateX(20px);
 }
 
@@ -148,7 +154,6 @@ body.modo-oscuro #toggle-modo {
     border-radius: 15px;
     box-shadow: 0 5px 15px var(--color-sombra);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
 }
 
 .plan:hover {
@@ -175,19 +180,24 @@ body.modo-oscuro #toggle-modo {
     margin-bottom: 1.5rem;
 }
 
-.precio .mensual {
+/* Control de visibilidad de precios */
+.precio .mensual,
+.precio .periodo.mensual {
     display: inline;
 }
 
-.precio .anual {
+.precio .anual,
+.precio .periodo.anual {
     display: none;
 }
 
-#toggle-plan:checked ~ .tabla-precios .precio .mensual {
+#toggle-plan:checked ~ .tabla-precios .precio .mensual,
+#toggle-plan:checked ~ .tabla-precios .precio .periodo.mensual {
     display: none;
 }
 
-#toggle-plan:checked ~ .tabla-precios .precio .anual {
+#toggle-plan:checked ~ .tabla-precios .precio .anual,
+#toggle-plan:checked ~ .tabla-precios .precio .periodo.anual {
     display: inline;
 }
 
@@ -197,6 +207,7 @@ body.modo-oscuro #toggle-modo {
     color: var(--color-texto-secundario);
 }
 
+/* Resto de estilos sin cambios */
 .plan ul {
     list-style: none;
     margin-bottom: 2rem;
@@ -214,7 +225,6 @@ body.modo-oscuro #toggle-modo {
     text-decoration: line-through;
 }
 
-/* Tooltips */
 .plan li[data-tooltip] {
     cursor: help;
 }
@@ -262,17 +272,6 @@ body.modo-oscuro #toggle-modo {
     transform: translateY(0);
     box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
 }
-.btn-suscribir:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-.btn-suscribir:disabled:hover,
-.btn-suscribir:disabled:focus {
-    transform: none;
-    box-shadow: none;
-}
-
 /* Responsividad */
 @media (max-width: 768px) {
     .seccion-precios h2 {

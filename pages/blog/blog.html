@@ -46,27 +46,27 @@
         </ul>
     </nav>
     <section class="container">
+      
+        <input type="radio" name="category" id="all-cat" checked>
+        <input type="radio" name="category" id="nutricion">
+        <input type="radio" name="category" id="entrenamiento">
+        <input type="radio" name="category" id="salud">
+        <input type="radio" name="category" id="estilo-de-vida">
+    
         <aside class="sidebar">
-        <div class="categories">
-            <h2>Categorías</h2>
-            <ul>
-                <li><input type="radio" name="category" id="all-cat" checked><label for="all-cat">Todas</label></li>
-                <li><input type="radio" name="category" id="nutricion" data-category="nutricion"><label for="nutricion">Nutrición</label></li>
-                <li><input type="radio" name="category" id="entrenamiento" data-category="entrenamiento"><label for="entrenamiento">Entrenamiento</label></li>
-                <li><input type="radio" name="category" id="salud" data-category="salud"><label for="salud">Salud</label></li>
-                <li><input type="radio" name="category" id="estilo-de-vida" data-category="estilo-de-vida"><label for="estilo-de-vida">Estilo de Vida</label></li>
-            </ul>
-        </div>
-        <div class="tags">
-            <h2>Tags</h2>
-            <ul>
-                <li><input type="checkbox" id="fitness" data-tag="fitness"><label for="fitness">Fitness</label></li>
-                <li><input type="checkbox" id="ejercicio" data-tag="ejercicio"><label for="ejercicio">Ejercicio</label></li>
-                <li><input type="checkbox" id="dieta" data-tag="dieta"><label for="dieta">Dieta</label></li>
-                <li><input type="checkbox" id="bienestar" data-tag="bienestar"><label for="bienestar">Bienestar</label></li>
-            </ul>
-        </div>
-    </aside>
+            <div class="categories">
+                <h2>Categorías</h2>
+                <ul>
+                    <li><label for="all-cat">Todas</label></li>
+                    <li><label for="nutricion">Nutrición</label></li>
+                    <li><label for="entrenamiento">Entrenamiento</label></li>
+                    <li><label for="salud">Salud</label></li>
+                    <li><label for="estilo-de-vida">Estilo de Vida</label></li>
+                </ul>
+            </div>
+        </aside>
+
+    <!--ARTICULOS DE NUTRICION-->
     <section class="articles">
         <article class="article reveal" data-category="nutricion" data-tags="fitness dieta">
             <img src="../.././assets/fotos/blog/nutricion.jpg" alt="Artículo 1">
@@ -88,7 +88,48 @@
                 </div>
             </div>
         </article>
+        <article class="article reveal" data-category="nutricion" data-tags="dieta">
+            <img src="../../assets/fotos/blog/proteina.jpg" alt=" Artículo 2">
+            <h2><a href="#">La Importancia de la Proteína en tu Dieta</a></h2>
+            <p>Todo lo que necesitas saber sobre la proteína y su papel en tu dieta.</p>
+            <div class="article-meta">
+                <span>Categoría: Nutrición</span>
+                <span>Tags: Dieta</span>
+            </div>
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@joseperez:</strong> Muy interesante, me gustaría saber más sobre esto.</p>
+                </div>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@carla_garcia:</strong> Gracias por la información, me ha ayudado a entender mejor mi dieta.</p>
+                </div>
+            </div>
+        </article>
+        <article class="article reveal" data-category="nutricion" data-tags="fitness">
+        <img src="../../assets/fotos/blog/frutossecos.jpg" alt=" Artículo 3">
+        <h2><a href="#">Los Frutos Secos: Un Alimento Completo para tu Dieta</a></h2>
+        <p>Descubre los beneficios de incluir frutos secos en tu dieta diaria.</p>
+        <div class="article-meta">
+            <span>Categoría: Nutrición</span>
+            <span>Tags: Fitness</span>
+        </div>
+        <div class="comments">
+            <h3>Comentarios</h3>
+            <div class="comment">
+                <div class="avatar"></div>
+                <p><strong>@mariaperez:</strong> ¡Me encantan los frutos secos! Gracias por la información.</p>
+            </div>
+            <div class="comment">
+                <div class="avatar"></div>
+                <p><strong>@juanlopez:</strong> Muy útil, me ha ayudado a incluir más frutos secos en mi dieta.</p>
+            </div>
+        </div>
+        </article>
 
+<!--ARTICULOS DE ENTRENAMIENTO-->
         <article class="article reveal" data-category="entrenamiento" data-tags="ejercicio fitness">
             <img src="../.././assets/fotos/blog/entrenamientoblog1.jpg" alt="Artículo 2">
             <h2><a href="#">Rutina de Entrenamiento para Principiantes</a></h2>
@@ -105,6 +146,24 @@
                 </div>
             </div>
         </article>
+        <article class="article reveal" data-category="entrenamiento" data-tags="ejercicio fitness">    
+            <img src="../../assets/fotos/index/crossfit 3.jpg" alt=" Artículo 2">
+            <h2><a href="#">Beneficios del CrossFit para tu Salud</a></h2>
+            <p>Descubre cómo el CrossFit puede transformar tu salud y bienestar.</p>
+            <div class="article-meta">
+                <span>Categoría: Entrenamiento</span>
+                <span>Tags: Ejercicio, Fitness</span>
+            </div>
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@carlamartinez:</strong> ¡Me encanta el CrossFit! Gracias por la información.</p>
+                </div>
+            </div>
+        </article>
+
+        <!--ARTICULOS DE SALUD-->
 
         <article class="article reveal" data-category="salud" data-tags="bienestar">
             <img src="../.././assets/fotos/blog/saludmental.jpg" alt="Artículo 3">
@@ -122,6 +181,23 @@
                 </div>
             </div>
         </article>
+        <article class="article reveal" data-category="salud" data-tags="bienestar ">
+            <img src="../../assets/fotos/blog/hidratacion.jpg" alt="Artículo 4">
+            <h2><a href="#">La Importancia de la Hidratación</a></h2>
+            <p>Descubre por qué la hidratación es clave para tu salud y rendimiento.</p>
+            <div class="article-meta">
+                <span>Categoría: Salud</span>
+                <span>Tags: Bienestar</span>
+            </div>
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@mariaperez:</strong> ¡Muy útil! Siempre olvido beber suficiente agua.</p>
+                </div>
+            </div>
+        </article>
+        <!--ARTICULOS DE ESTILO DE VIDA-->
         <article class="article reveal" data-category="estilo-de-vida" data-tags="fitness">
             <img src="../.././assets/fotos/blog/vidasana.jpg" alt="Artículo 4">
             <h2><a href="#">Estilo de Vida Saludable: Consejos Prácticos</a></h2>
@@ -142,8 +218,22 @@
                 </div>
             </div>
         </article>
-        <!-- Añadimos el botón para mostrar más artículos -->
-         <button>Mostrar más artículos</button>
+        <article class="article reveal" data-category="estilo-de-vida" data-tags=" fitness">
+            <img src="../../assets/fotos/blog/meditacion.jpg" alt="Artículo 5">
+            <h2><a href="#">Meditación: Beneficios para tu Bienestar</a></h2>
+            <p>Descubre cómo la meditación puede mejorar tu bienestar físico y mental.</p>
+            <div class="article-meta">
+                <span>Categoría: Estilo de Vida</span>
+                <span>Tags: Fitness</span>
+            </div>
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <div class="comment">
+                    <div class="avatar"></div>
+                    <p><strong>@sofia_garcia:</strong> ¡Me encanta meditar! Gracias por la información.</p>
+                </div>
+            </div>
+        </article>
     </section>
 </section>
     

@@ -56,8 +56,6 @@ body.modo-oscuro #toggle-modo {
     color: var(--color-texto);
 }
 
-
-
 /* Container Principal */
 .container {
     display: grid;
@@ -68,6 +66,11 @@ body.modo-oscuro #toggle-modo {
     padding: 0 2rem;
 }
 
+/* Inputs de Radio (Ocultos) */
+.container > input[type="radio"] {
+    display: none;
+}
+
 /* Sidebar */
 .sidebar {
     background: var(--color-primario);
@@ -75,6 +78,7 @@ body.modo-oscuro #toggle-modo {
     border-radius: 15px;
     color: var(--color-texto);
     box-shadow: 0 5px 15px var(--color-sombra);
+    height: 400px;
 }
 
 .sidebar h2 {
@@ -87,10 +91,6 @@ body.modo-oscuro #toggle-modo {
 
 .sidebar ul {
     list-style: none;
-}
-
-.sidebar input {
-    display: none;
 }
 
 .sidebar label {
@@ -106,7 +106,11 @@ body.modo-oscuro #toggle-modo {
     background: rgba(255, 77, 77, 0.1);
 }
 
-.sidebar input:checked + label {
+.container > input[type="radio"]:checked + .sidebar .categories label[for="all-cat"],
+.container > input[type="radio"]:checked + .sidebar .categories label[for="nutricion"],
+.container > input[type="radio"]:checked + .sidebar .categories label[for="entrenamiento"],
+.container > input[type="radio"]:checked + .sidebar .categories label[for="salud"],
+.container > input[type="radio"]:checked + .sidebar .categories label[for="estilo-de-vida"] {
     color: var(--color-secundario);
     font-weight: 700;
 }
@@ -173,7 +177,6 @@ body.modo-oscuro #toggle-modo {
 }
 
 /* Sistema de Filtrado con CSS */
-input:not(:checked) + label,
 #all-cat:checked ~ .articles .article {
     display: block;
 }
@@ -182,13 +185,6 @@ input:not(:checked) + label,
 #entrenamiento:checked ~ .articles .article:not([data-category="entrenamiento"]),
 #salud:checked ~ .articles .article:not([data-category="salud"]),
 #estilo-de-vida:checked ~ .articles .article:not([data-category="estilo-de-vida"]) {
-    display: none;
-}
-
-#fitness:checked ~ .articles .article:not([data-tags*="fitness"]),
-#ejercicio:checked ~ .articles .article:not([data-tags*="ejercicio"]),
-#dieta:checked ~ .articles .article:not([data-tags*="dieta"]),
-#bienestar:checked ~ .articles .article:not([data-tags*="bienestar"]) {
     display: none;
 }
 
@@ -236,6 +232,8 @@ input:not(:checked) + label,
 .comment p strong {
     color: var(--color-primario);
 }
+
+
 button{
     background: var(--color-secundario);
     color: #000000;
