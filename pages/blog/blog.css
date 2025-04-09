@@ -1,60 +1,3 @@
-/* Importar fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
-
-/* Variables CSS para colores y temas */
-:root {
-    --color-primario: #1a1a1a;
-    --color-secundario: #ff4d4d;
-    --color-acento: #f5f5f5;
-    --color-texto: #ffffff;
-    --color-texto-secundario: #b0b0b0;
-    --color-sombra: rgba(0, 0, 0, 0.3);
-    --color-gradiente: linear-gradient(135deg, #ff4d4d, #ff7b7b);
-}
-
-/* Reset básico y estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--color-acento);
-    color: var(--color-texto);
-    line-height: 1.6;
-}
-/* Modo oscuro: Cambiamos las variables cuando el body tiene la clase .modo-oscuro */
-body.modo-oscuro {
-    --color-primario: #f5f5f5; /* Invertimos: fondo claro para modo oscuro */
-    --color-acento: #1a1a1a; /* Fondo oscuro */
-    --color-texto: #1a1a1a; /* Texto oscuro */
-    --color-texto-secundario: #666; /* Texto secundario más oscuro */
-    --color-sombra: rgba(255, 255, 255, 0.3); /* Sombra clara */
-    --color-gradiente: linear-gradient(135deg, #ff7b7b, #ff4d4d); /* Invertimos el gradiente */
-}
-
-/* Estilo para el botón de alternar modo oscuro */
-#toggle-modo {
-    background: none;
-    border: none;
-    color: var(--color-texto);
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.7rem 1.2rem;
-    transition: transform 0.3s ease;
-}
-
-#toggle-modo:hover,
-#toggle-modo:focus {
-    transform: scale(1.1);
-    outline: none;
-}
-
-body.modo-oscuro #toggle-modo {
-    color: var(--color-texto);
-}
 
 /* Container Principal */
 .container {
@@ -78,7 +21,7 @@ body.modo-oscuro #toggle-modo {
     border-radius: 15px;
     color: var(--color-texto);
     box-shadow: 0 5px 15px var(--color-sombra);
-    height: 400px;
+    height: 750px;
 }
 
 .sidebar h2 {
@@ -114,6 +57,7 @@ body.modo-oscuro #toggle-modo {
     color: var(--color-secundario);
     font-weight: 700;
 }
+
 
 /* Articles - Diseño Newspaper */
 .articles {
@@ -187,6 +131,7 @@ body.modo-oscuro #toggle-modo {
 #estilo-de-vida:checked ~ .articles .article:not([data-category="estilo-de-vida"]) {
     display: none;
 }
+
 
 /* Comentarios */
 .comments h3 {

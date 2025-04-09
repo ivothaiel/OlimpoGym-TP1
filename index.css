@@ -1,195 +1,3 @@
-/* Importar fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
-
-/* Variables CSS para colores y temas */
-:root {
-    --color-primario: #1a1a1a; /* Negro profundo */
-    --color-secundario: #ff4d4d; /* Rojo vibrante */
-    --color-acento: #f5f5f5; /* Gris claro */
-    --color-texto: #ffffff; /* Blanco para texto */
-    --color-texto-secundario: #b0b0b0; /* Gris claro para texto secundario */
-    --color-sombra: rgba(0, 0, 0, 0.3);
-    --color-gradiente: linear-gradient(135deg, #ff4d4d, #ff7b7b);
-}
-
-/* Reset básico y estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--color-acento);
-    color: var(--color-texto);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Modo oscuro: Cambiamos las variables cuando el body tiene la clase .modo-oscuro */
-body.modo-oscuro {
-    --color-primario: #f5f5f5; /* Invertimos: fondo claro para modo oscuro */
-    --color-acento: #1a1a1a; /* Fondo oscuro */
-    --color-texto: #1a1a1a; /* Texto oscuro */
-    --color-texto-secundario: #666; /* Texto secundario más oscuro */
-    --color-sombra: rgba(255, 255, 255, 0.3); /* Sombra clara */
-    --color-gradiente: linear-gradient(135deg, #ff7b7b, #ff4d4d); /* Invertimos el gradiente */
-}
-
-/* Ajustes específicos para elementos en modo oscuro */
-body.modo-oscuro .tarjeta {
-    background: var(--color-acento);
-}
-
-body.modo-oscuro .tarjeta h3,
-body.modo-oscuro .tarjeta p {
-    color: var(--color-texto);
-}
-
-body.modo-oscuro .testimonios {
-    background: var(--color-acento);
-}
-
-body.modo-oscuro .testimonios h2 {
-    color: var(--color-texto);
-}
-
-body.modo-oscuro .carrusel .slide {
-    background: var(--color-primario);
-    color: var(--color-texto);
-}
-
-/* Estilo para el botón de alternar modo oscuro */
-#toggle-modo {
-    background: none;
-    border: none;
-    color: var(--color-texto);
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.7rem 1.2rem;
-    transition: transform 0.3s ease;
-}
-
-#toggle-modo:hover,
-#toggle-modo:focus {
-    transform: scale(1.1);
-    outline: none;
-}
-
-body.modo-oscuro #toggle-modo {
-    color: var(--color-texto);
-}
-/* Header */
-header {
-    background: var(--color-primario);
-    padding: 1.5rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px var(--color-sombra);
-}
-
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--color-texto);
-    text-transform: uppercase;
-}
-
-/* Menú de Navegación con Mega-Menú */
-.menu-navegacion {
-    background: var(--color-primario);
-    padding: 1rem;
-    border-bottom: 2px solid var(--color-secundario);
-}
-
-.menu-navegacion ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-}
-
-.menu-navegacion li {
-    position: relative;
-}
-
-.menu-navegacion a {
-    color: var(--color-texto);
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 0.7rem 1.2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.menu-navegacion a:hover,
-.menu-navegacion a:focus {
-    color: var(--color-secundario);
-    transform: scale(1.05);
-    outline: none;
-}
-
-.menu-navegacion a:focus {
-    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.5);
-}
-
-/* Mega-Menú */
-.mega-opcion:hover .mega-menu,
-.mega-opcion:focus-within .mega-menu {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.mega-menu {
-    display: none;
-    opacity: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--color-acento);
-    box-shadow: 0 4px 15px var(--color-sombra);
-    padding: 1.5rem;
-    z-index: 1000;
-    flex-direction: row;
-    gap: 2rem;
-    border-radius: 8px;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.mega-columna {
-    display: flex;
-    flex-direction: column;
-}
-
-.mega-columna h4 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--color-primario);
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-    text-transform: uppercase;
-}
-
-.mega-columna a {
-    color: var(--color-primario);
-    padding: 0.5rem 0;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.mega-columna a:hover,
-.mega-columna a:focus {
-    color: var(--color-secundario);
-}
-
-
 
 /* Sección Hero */
 .hero {
@@ -270,6 +78,9 @@ body.modo-oscuro .hero-contenido p {
     color: #b0b0b0; 
 }
 
+
+
+
 /* Animaciones para la Sección Hero */
 .animado {
     opacity: 0;
@@ -298,6 +109,9 @@ body.modo-oscuro .hero-contenido p {
         transform: translateY(0);
     }
 }
+
+
+
 
 /* Clases Destacadas */
 .clases-destacadas {
@@ -384,6 +198,9 @@ body.modo-oscuro .tarjeta h3 {
 body.modo-oscuro .tarjeta p {
     color: #b0b0b0; /* Un gris claro para el texto secundario, para mejorar legibilidad */
 }
+
+
+/*Sección Contador */
 .contador {
     background: var(--color-gradiente);
     color: var(--color-texto);
@@ -400,7 +217,6 @@ body.modo-oscuro .tarjeta p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/black-linen.png');
     opacity: 0.1;
     z-index: 0;
 }
@@ -468,6 +284,9 @@ body.modo-oscuro .tarjeta p {
         opacity: 0;
     }
 }
+
+
+
 
 /*testimonios del carrusel CSS */
 .testimonios {
@@ -549,90 +368,3 @@ body.modo-oscuro .tarjeta p {
 }
 
 
-footer {
-    background: var(--color-primario);
-    color: var(--color-texto);
-    padding: 3rem 2rem;
-    position: relative;
-}
-
-.footer-contenido {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.newsletter h2,
-.redes-suscripcion h2,
-.mapa h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-}
-
-.newsletter form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.newsletter input {
-    padding: 0.8rem;
-    border: none;
-    border-radius: 25px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    background: var(--color-acento);
-    color: var(--color-primario);
-}
-
-.newsletter button {
-    background: var(--color-gradiente);
-    color: var(--color-texto);
-    border: none;
-    padding: 0.8rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.newsletter button:hover,
-.newsletter button:focus {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
-}
-
-.redes-sociales a {
-    display: block;
-    color: var(--color-texto-secundario);
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    transition: color 0.3s ease;
-}
-
-.redes-sociales a:hover,
-.redes-sociales a:focus {
-    color: var(--color-secundario);
-}
-
-.mapa iframe {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px var(--color-sombra);
-}
-
-.copyright {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: var(--color-texto-secundario);
-}
