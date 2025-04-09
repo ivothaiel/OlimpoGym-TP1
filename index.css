@@ -254,7 +254,7 @@ body.modo-oscuro .tarjeta p {
     content: "+300"; /* Valor final */
     display: inline-block;
     opacity: 0;
-    animation: fadeIn 3s ease-in-out forwards;
+    animation: fadeInOut 8s ease-in-out infinite; /* Animación en bucle */
 }
 
 .numero::after {
@@ -264,30 +264,26 @@ body.modo-oscuro .tarjeta p {
     left: 0;
     width: 100%;
     text-align: center;
-    animation: fadeOut 3s ease-in-out forwards;
+    animation: fadeOutIn 8s ease-in-out infinite; /* Animación en bucle */
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
+@keyframes fadeInOut {
+    0%, 50% {
         opacity: 1;
     }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
+    55%, 100% {
         opacity: 0;
     }
 }
 
-
-
-
+@keyframes fadeOutIn {
+    0%, 50% {
+        opacity: 0;
+    }
+    55%, 100% {
+        opacity: 1;
+    }
+}
 /*testimonios del carrusel CSS */
 .testimonios {
     padding: 5rem 2rem;

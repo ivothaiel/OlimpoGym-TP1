@@ -1,4 +1,3 @@
-
 /* Sección de Hero */
 .hero {
     position: relative;
@@ -240,6 +239,7 @@ body.modo-oscuro .habilidad .barra::before {
     gap: 5px;
     font-size: 1.5rem;
     padding: 0.5rem 0;
+    backface-visibility: visible; /* Asegura que las estrellas sean visibles al girar */
 }
 
 .rating .filled {

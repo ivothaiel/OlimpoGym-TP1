@@ -1,4 +1,3 @@
-
 /* Container Principal */
 .container {
     display: grid;
@@ -129,6 +128,13 @@
 #entrenamiento:checked ~ .articles .article:not([data-category="entrenamiento"]),
 #salud:checked ~ .articles .article:not([data-category="salud"]),
 #estilo-de-vida:checked ~ .articles .article:not([data-category="estilo-de-vida"]) {
+    display: none;
+}
+
+#tag-fitness:checked ~ .articles .article:not([data-tags*="fitness"]),
+#tag-dieta:checked ~ .articles .article:not([data-tags*="dieta"]),
+#tag-ejercicio:checked ~ .articles .article:not([data-tags*="ejercicio"]),
+#tag-bienestar:checked ~ .articles .article:not([data-tags*="bienestar"]) {
     display: none;
 }
 
