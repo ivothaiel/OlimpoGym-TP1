@@ -94,11 +94,11 @@ body.modo-oscuro .contenedor-filtros input[type="checkbox"]:checked + label {
 
 /* Tamaños personalizados para cada tarjeta */
 .tarjeta[data-categoria="musculacion"] {
-    grid-row: span 30; /* Vertical grande */
+    grid-row: span 10; /* Vertical grande */
 }
 
 .tarjeta[data-categoria="powerlifting"] {
-    grid-row: span 25; /* Vertical mediana */
+    grid-row: span 20; /* Vertical mediana */
 }
 
 .tarjeta[data-categoria="crossfit"] {
@@ -106,7 +106,7 @@ body.modo-oscuro .contenedor-filtros input[type="checkbox"]:checked + label {
 }
 
 .tarjeta[data-categoria="calistenia"] {
-    grid-row: span 20; /* Cuadrada */
+    grid-row: span 25; /* Cuadrada */
 }
 
 .tarjeta[data-categoria="yoga"] {
