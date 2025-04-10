@@ -64,28 +64,67 @@ body.modo-oscuro .contenedor-filtros input[type="checkbox"]:checked + label {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas flexibles */
+    grid-auto-rows: 10px; /* Altura base para las filas */
+    gap: 1.5rem; /* Espaciado entre tarjetas */
 }
 
-/* Tarjetas con efecto de zoom y overlay */
+/* Galería de Tarjetas (Masonry con CSS Grid) */
+.galeria {
+    padding: 2rem;
+    background: var(--color-acento);
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas flexibles */
+    grid-auto-rows: 10px; /* Altura base para las filas */
+    gap: 1.5rem; /* Espaciado entre tarjetas */
+}
+
+/* Tarjetas con tamaños específicos */
 .tarjeta {
     position: relative;
     border-radius: 15px;
     box-shadow: 0 5px 15px var(--color-sombra);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Tamaños personalizados para cada tarjeta */
+.tarjeta[data-categoria="musculacion"] {
+    grid-row: span 30; /* Vertical grande */
+}
 
+.tarjeta[data-categoria="powerlifting"] {
+    grid-row: span 25; /* Vertical mediana */
+}
+
+.tarjeta[data-categoria="crossfit"] {
+    grid-row: span 15; /* Horizontal */
+}
+
+.tarjeta[data-categoria="calistenia"] {
+    grid-row: span 20; /* Cuadrada */
+}
+
+.tarjeta[data-categoria="yoga"] {
+    grid-row: span 25; /* Vertical mediana */
+}
+
+.tarjeta[data-categoria="pilates"] {
+    grid-row: span 20; /* Cuadrada */
+}
+
+/* Imágenes dentro de las tarjetas */
 .tarjeta img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%; /* Ajusta la altura automáticamente */
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
     display: block;
     transition: transform 0.3s ease;
 }
-
 /* Overlay */
 .tarjeta::after {
     content: '';
@@ -103,16 +142,10 @@ body.modo-oscuro .contenedor-filtros input[type="checkbox"]:checked + label {
 .tarjeta p {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    color: var(--color-texto);
-    opacity: 0;
+    transform: translateX(-50%);    opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 1;
-}
-
-body.modo-oscuro .tarjeta h3,
-body.modo-oscuro .tarjeta p {
-    color: #ffffff;
+    color: var(--color-texto);
 }
 
 .tarjeta h3 {
@@ -120,6 +153,7 @@ body.modo-oscuro .tarjeta p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
+    color: var(--color-texto);
 }
 
 .tarjeta p {
@@ -128,7 +162,9 @@ body.modo-oscuro .tarjeta p {
     font-size: 1rem;
     text-align: center;
     width: 80%;
+    color: var(--color-texto);
 }
+
 
 .tarjeta:hover,
 .tarjeta:focus-within {
