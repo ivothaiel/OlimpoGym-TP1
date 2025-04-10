@@ -248,6 +248,7 @@ body.modo-oscuro .habilidad .barra::before {
 .rating .filled {
     color: #ffd700;
     animation: starGlow 1.5s ease-in-out infinite;
+    animation-delay: calc(var(--star-index) * 0.2s); /* Retraso progresivo */
 }
 
 @keyframes starGlow {
@@ -256,7 +257,7 @@ body.modo-oscuro .habilidad .barra::before {
         opacity: 0.8;
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.2);
         opacity: 1;
     }
     100% {
